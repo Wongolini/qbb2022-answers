@@ -49,7 +49,7 @@ def parse_bed(fname):
             if j == 11 or j == 10: # field 11 is a comma delimited list. Parse into int list.
                 try:
                     fields[j] = numeric_list_parser(fields[j]) #fix string lists with comma delimit
-        
+
                 except:
                     print('Broken field {}, index {}'.format(field_names[j], j))
                     continue
@@ -63,11 +63,11 @@ def parse_bed(fname):
             elif j == 8:    #field 8 is RGB. Cast to list.
                 try:
                     RGB_hold = fields[j].split(',')
-                    RGB_set = [float(x) for x in RGB_hold]
+                    RGB_set = [int(x) for x in RGB_hold]
                     fields[j] = set(RGB_set)
                 except:
+                    print('Field 8 not composed of integers on line {}'.format(i))
                     fields[j] = None
-            
             
             else:
                 try:    # Generic exceptions
@@ -76,9 +76,11 @@ def parse_bed(fname):
                     print('Unkown issue with field {}, index {}'.format(field_names[j],j))
                     print('File had value: {}'.format(fields[j]))
                     print('Expected {}'.format(field_types[j]))
-                    
-
-        bed.append(fields)
+  
+        if len(fields[11]) == fields[9] and len(fields[11]) == len(fields[10]): # ensure proper values for fields 9,10,11
+            bed.append(fields)
+        else:
+            continue 
 
     fs.close()
     return bed
