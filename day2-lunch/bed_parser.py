@@ -6,8 +6,8 @@ def parse_bed(fname):
     def numeric_list_parser(string_list):
         # special function to delimit lists into integer lists.
         # issue that the last value is , eg. [1,2,3,] --> ['1', '2', '3', ',']
-        hold_list = string_list.split(',')
-        numeric_list = [int(x) for x in hold_list[:len(hold_list)-1]]
+        hold_list = string_list.rstrip(',').split(',')
+        numeric_list = [int(x) for x in hold_list[:len(hold_list)]]
         return numeric_list
     try:
         fs = open(fname, 'r')
