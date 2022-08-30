@@ -24,6 +24,7 @@ cut -f 7 exercise3.out | sort | uniq | wc -l
 51.465
 
 Exercise 4.
+Answer: CRYAA
 Needed to change paths to correctly access data
 grep command needed to have correct options, -Fxvf 
 -F, --fixed-strings
