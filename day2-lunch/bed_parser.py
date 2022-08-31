@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import sys
 
 def parse_bed(fname):
@@ -63,7 +62,7 @@ def parse_bed(fname):
             elif j == 8:    #field 8 is RGB. Cast to list.
                 try:
                     RGB_hold = fields[j].split(',')
-                    RGB_set = [int(x) for x in RGB_hold]
+                    RGB_set = [int(x) for x in RGB_hold] #check int
                     fields[j] = set(RGB_set)
                 except:
                     print('Field 8 not composed of integers on line {}'.format(i))
