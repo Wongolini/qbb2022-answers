@@ -5,6 +5,7 @@ import sys
 # population, superpopulation, and sex (3 separate plots)
 def visualize_color(data, qualities):
     # how I would do it without numpy
+    plt.title('PCA {}'.format(qualities))
     pc1=data['PC1']
     pc2=data['PC2']
     qual=list(set(data[qualities]))
@@ -23,6 +24,7 @@ def visualize_color(data, qualities):
 
 def visualize_color_2(data, qualities):
     # how I would do it with numpy
+    plt.title('Numpy PCA {}'.format(qualities))
     meta = np.unique(data[qualities])
     for m in meta:
         indices = np.where(data[qualities]==m)[0]
