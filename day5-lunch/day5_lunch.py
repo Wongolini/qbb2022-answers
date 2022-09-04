@@ -71,7 +71,7 @@ class Stats_Visualise:
         self.record_stats={}
         
 
-    def compare_hist(self,f1,f2):
+    def compare_hist(self,f1,f2,xlab):
         #f1 field 1
         #f2 field 2
         plt.title('{} vs {} hist'.format(f1,f2))
@@ -79,7 +79,7 @@ class Stats_Visualise:
         plt.hist(self.df[f2],density=True,alpha=.25,label=f2)
         plt.legend()
         plt.ylabel('frequency')
-        
+        plt.xlabel(xlab)
         plt.savefig('{}_{}_hist.png'.format(f1,f2))
         plt.show()
         plt.close()
@@ -89,7 +89,6 @@ class Stats_Visualise:
         plt.scatter(self.df[f1],self.df[f2])
         plt.xlabel(f1)
         plt.ylabel(f2)
-        
         plt.savefig('{}_{}_scatter.png'.format(f1,f2))
         plt.show()
         plt.close()
@@ -136,6 +135,8 @@ if __name__ == "__main__":
     V.cartesian('Father_age','n_muts')
     V.OLS('Mother_age','n_muts',)
     V.OLS('Father_age','n_muts')
-    V.compare_hist('n_father','n_mother')
+    V.compare_hist('n_father','n_mother','# mutations')
    
 
+
+# %%
