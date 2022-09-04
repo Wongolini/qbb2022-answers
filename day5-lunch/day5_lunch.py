@@ -106,6 +106,7 @@ class Stats_Visualise:
         model = smf.ols(formula = "{} ~ 1 + {}".format(f1,f2), data = self.df)
         results = model.fit()
         self.record_stats['{}_{}_ols_pval'.format(f1,f2)] = results.pvalues
+        print('OLS on fields: {}, {}'.format(f1,f2))
         print(results.summary())
 
 

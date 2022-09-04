@@ -1,10 +1,11 @@
+OLS on fields: Mother_age, n_muts
                             OLS Regression Results                            
 ==============================================================================
 Dep. Variable:             Mother_age   R-squared:                       0.547
 Model:                            OLS   Adj. R-squared:                  0.545
 Method:                 Least Squares   F-statistic:                     475.0
 Date:                Sun, 04 Sep 2022   Prob (F-statistic):           1.15e-69
-Time:                        03:03:13   Log-Likelihood:                -1145.2
+Time:                        03:05:50   Log-Likelihood:                -1145.2
 No. Observations:                 396   AIC:                             2294.
 Df Residuals:                     394   BIC:                             2302.
 Df Model:                           1                                         
@@ -23,13 +24,14 @@ Kurtosis:                       2.733   Cond. No.                         286.
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+OLS on fields: Father_age, n_muts
                             OLS Regression Results                            
 ==============================================================================
 Dep. Variable:             Father_age   R-squared:                       0.607
 Model:                            OLS   Adj. R-squared:                  0.606
 Method:                 Least Squares   F-statistic:                     609.3
 Date:                Sun, 04 Sep 2022   Prob (F-statistic):           5.54e-82
-Time:                        03:03:13   Log-Likelihood:                -1197.5
+Time:                        03:05:50   Log-Likelihood:                -1197.5
 No. Observations:                 396   AIC:                             2399.
 Df Residuals:                     394   BIC:                             2407.
 Df Model:                           1                                         
