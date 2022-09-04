@@ -79,8 +79,9 @@ class Stats_Visualise:
         plt.hist(self.df[f2],density=True,alpha=.25,label=f2)
         plt.legend()
         plt.ylabel('frequency')
-        plt.show()
+        
         plt.savefig('{}_{}_hist.png'.format(f1,f2))
+        plt.show()
         plt.close()
 
     def cartesian(self,f1,f2):
@@ -88,8 +89,9 @@ class Stats_Visualise:
         plt.scatter(self.df[f1],self.df[f2])
         plt.xlabel(f1)
         plt.ylabel(f2)
-        plt.show()
+        
         plt.savefig('{}_{}_scatter.png'.format(f1,f2))
+        plt.show()
         plt.close()
 
     def OLS(self,f1,f2):
