@@ -130,12 +130,11 @@ if __name__ == "__main__":
 
     all_data= merge_data(data1n, data2)
     V= Stats_Visualise(all_data)
-    V.compare_hist('n_muts','Mother_age')
+    
     V.cartesian('Mother_age','n_muts')
-    V.compare_hist('Father_age','n_muts')
     V.cartesian('Father_age','n_muts')
     V.OLS('Mother_age','n_muts',)
     V.OLS('Father_age','n_muts')
-# %%
+    V.compare_hist('n_father','n_mother')
+   
 
-# %%
