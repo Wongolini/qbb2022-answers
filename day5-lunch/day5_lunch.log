@@ -1,52 +1,68 @@
+T-TEST
+Ttest_indResult(statistic=-53.40356528726923, pvalue=2.198603179308129e-264)
 OLS on fields: Mother_age, n_muts
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:             Mother_age   R-squared:                       0.547
+Dep. Variable:                 n_muts   R-squared:                       0.547
 Model:                            OLS   Adj. R-squared:                  0.545
 Method:                 Least Squares   F-statistic:                     475.0
-Date:                Sun, 04 Sep 2022   Prob (F-statistic):           1.15e-69
-Time:                        03:05:50   Log-Likelihood:                -1145.2
-No. Observations:                 396   AIC:                             2294.
-Df Residuals:                     394   BIC:                             2302.
+Date:                Mon, 05 Sep 2022   Prob (F-statistic):           1.15e-69
+Time:                        19:01:37   Log-Likelihood:                -1515.9
+No. Observations:                 396   AIC:                             3036.
+Df Residuals:                     394   BIC:                             3044.
 Df Model:                           1                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-Intercept      7.8645      0.915      8.597      0.000       6.066       9.663
-n_muts         0.2899      0.013     21.794      0.000       0.264       0.316
+Intercept     15.4365      2.420      6.379      0.000      10.679      20.194
+Mother_age     1.8852      0.086     21.794      0.000       1.715       2.055
 ==============================================================================
-Omnibus:                        2.526   Durbin-Watson:                   1.812
-Prob(Omnibus):                  0.283   Jarque-Bera (JB):                2.461
-Skew:                           0.140   Prob(JB):                        0.292
-Kurtosis:                       2.733   Cond. No.                         286.
+Omnibus:                        7.739   Durbin-Watson:                   1.800
+Prob(Omnibus):                  0.021   Jarque-Bera (JB):                7.604
+Skew:                           0.327   Prob(JB):                       0.0223
+Kurtosis:                       3.183   Cond. No.                         121.
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Intercept     15.436470
+Mother_age     1.885151
+dtype: float64 Mother_age, n_muts
+Pval:  Intercept     5.012000e-10
+Mother_age    1.152020e-69
+dtype: float64
 OLS on fields: Father_age, n_muts
                             OLS Regression Results                            
 ==============================================================================
-Dep. Variable:             Father_age   R-squared:                       0.607
+Dep. Variable:                 n_muts   R-squared:                       0.607
 Model:                            OLS   Adj. R-squared:                  0.606
 Method:                 Least Squares   F-statistic:                     609.3
-Date:                Sun, 04 Sep 2022   Prob (F-statistic):           5.54e-82
-Time:                        03:05:50   Log-Likelihood:                -1197.5
-No. Observations:                 396   AIC:                             2399.
-Df Residuals:                     394   BIC:                             2407.
+Date:                Mon, 05 Sep 2022   Prob (F-statistic):           5.54e-82
+Time:                        19:01:37   Log-Likelihood:                -1487.4
+No. Observations:                 396   AIC:                             2979.
+Df Residuals:                     394   BIC:                             2987.
 Df Model:                           1                                         
 Covariance Type:            nonrobust                                         
 ==============================================================================
                  coef    std err          t      P>|t|      [0.025      0.975]
 ------------------------------------------------------------------------------
-Intercept      5.7796      1.044      5.536      0.000       3.727       7.832
-n_muts         0.3748      0.015     24.684      0.000       0.345       0.405
+Intercept     16.8458      2.088      8.069      0.000      12.741      20.950
+Father_age     1.6205      0.066     24.684      0.000       1.491       1.750
 ==============================================================================
-Omnibus:                        3.468   Durbin-Watson:                   1.851
-Prob(Omnibus):                  0.177   Jarque-Bera (JB):                3.300
-Skew:                           0.163   Prob(JB):                        0.192
-Kurtosis:                       3.305   Cond. No.                         286.
+Omnibus:                       16.105   Durbin-Watson:                   1.812
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               17.073
+Skew:                           0.465   Prob(JB):                     0.000196
+Kurtosis:                       3.414   Cond. No.                         127.
 ==============================================================================
 
 Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+Intercept     16.845773
+Father_age     1.620475
+dtype: float64 Father_age, n_muts
+Pval:  Intercept     8.653418e-15
+Father_age    5.542092e-82
+dtype: float64
+OLS MODEL PREDICTS 
+ Father_age=50.5 --> n_muts=98.67976753830877
