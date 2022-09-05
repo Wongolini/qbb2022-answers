@@ -4,6 +4,8 @@ import csv
 import matplotlib.pyplot as plt
 import statsmodels.formula.api as smf
 import pandas as pd 
+from scipy import stats
+
 
 def get_header(file):
     with open(file) as f:
@@ -65,36 +67,43 @@ def merge_data(d1,d2):
     return pd.DataFrame(all_dat,columns=['Proband_id','n_muts','n_father','n_mother','Father_age','Mother_age'])
 
 
-class Stats_Visualise:
+class Visualise:
     def __init__(self, df):
         self.df = df 
-        self.record_stats={}
-        
 
     def compare_hist(self,f1,f2,xlab):
         #f1 field 1
         #f2 field 2
-        plt.title('{} vs {} hist'.format(f1,f2))
-        plt.hist(self.df[f1],density=True,alpha=.25,label=f1)
-        plt.hist(self.df[f2],density=True,alpha=.25,label=f2)
-        plt.legend()
-        plt.ylabel('frequency')
-        plt.xlabel(xlab)
-        plt.savefig('{}_{}_hist.png'.format(f1,f2))
-        plt.show()
-        plt.close()
+        fig,ax = plt.subplots(figsize=[5,5])
+        ax.set_title('{} vs {} hist'.format(f1,f2))
+        ax.hist(self.df[f1],density=True,alpha=.25,label=f1)
+        ax.hist(self.df[f2],density=True,alpha=.25,label=f2)
+        ax.legend()
+        ax.set_ylabel('frequency')
+        ax.set_xlabel(xlab)
+        #plt.savefig('{}_{}_hist.png'.format(f1,f2))
+        #plt.show()
+        self.hist_plot = ax
 
     def cartesian(self,f1,f2):
-        plt.title('{} vs {}'.format(f1,f2))
-        plt.scatter(self.df[f1],self.df[f2])
-        plt.xlabel(f1)
-        plt.ylabel(f2)
-        plt.savefig('{}_{}_scatter.png'.format(f1,f2))
-        plt.show()
-        plt.close()
+        fig,ax = plt.subplots(figsize=[5,10])
+        ax.set_title('{} vs {}'.format(f1,f2))
+        ax.scatter(self.df[f1],self.df[f2])
+        ax.set_xlabel(f1)
+        ax.set_ylabel(f2)
+        #plt.savefig('{}_{}_scatter.png'.format(f1,f2))
+        #plt.show()
+        #plt.close()
+        self.scatter_plot = ax 
+
+class Stats:
+    def __init__(self,all_data):
+        self.df = all_data 
+        self.record_stats={}
 
     def OLS(self,f1,f2):
         '''
+        predict f2 from f1
         Use ordinary least squares smf.ols() to test for an 
         association between maternal age and maternally inherited 
         de novo mutations.
@@ -102,11 +111,33 @@ class Stats_Visualise:
         Is this relationship significant?
         What is the size of this relationship?
         '''
-        model = smf.ols(formula = "{} ~ 1 + {}".format(f1,f2), data = self.df)
-        results = model.fit()
-        self.record_stats['{}_{}_ols_pval'.format(f1,f2)] = results.pvalues
+        self.model = smf.ols(formula = "{} ~ 1 + {}".format(f2,f1), data = self.df)
+        self.results = self.model.fit()
+        self.record_stats['{}_{}_ols_pval'.format(f1,f2)] = self.results.pvalues
+        V = Visualise(self.df)
+        V.cartesian(f1,f2)        
+        ax = V.scatter_plot
+        x_theory = list(range(max(self.df[f1])))
+        y_predict = [self.results.params[1]*x+self.results.params[0] for x in x_theory]
+        ax.plot(x_theory, y_predict,'r--')
         print('OLS on fields: {}, {}'.format(f1,f2))
-        print(results.summary())
+        plt.show()
+        print(self.results.summary())
+    
+    def OLS_predict(self,theoretical_x):
+        # takes model from OLS and produces regression line
+        #theoretical_data = self.df.iloc[0]
+        #theoretical_data[f1] = theoretical_x
+        #theoretical_data[f2] = 9
+        #print('###########################################')
+        #print(theoretical_data)
+        #y=self.model.predict(theoretical_data)
+        #print(y)
+        predict_y = self.results.params[0]
+        for v in self.results.params[1:]:
+            predict_y+=v*theoretical_x
+        print(predict_y)
+        
 
 
 if __name__ == "__main__":
@@ -129,14 +160,18 @@ if __name__ == "__main__":
                           names=get_header(file2))
 
     all_data= merge_data(data1n, data2)
-    V= Stats_Visualise(all_data)
+    #V=Visualise(all_data)
     
-    V.cartesian('Mother_age','n_muts')
-    V.cartesian('Father_age','n_muts')
-    V.OLS('Mother_age','n_muts',)
-    V.OLS('Father_age','n_muts')
-    V.compare_hist('n_father','n_mother','# mutations')
-   
+    #V.cartesian('Mother_age','n_muts')
+    #V.cartesian('Father_age','n_muts')
+    print('T-TEST')
+    print(stats.ttest_ind(all_data["n_mother"],
+                      all_data["n_father"]))
+
+    S=Stats(all_data[['Father_age','n_muts']])
+    #S.OLS('Mother_age','n_muts',)
+    S.OLS('Father_age','n_muts')
+    S.OLS_predict(50.5)
 
 
 # %%
