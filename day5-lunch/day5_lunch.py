@@ -121,7 +121,8 @@ class Stats:
         y_predict = [self.results.params[1]*x+self.results.params[0] for x in x_theory]
         ax.plot(x_theory, y_predict,'r--')
         print('OLS on fields: {}, {}'.format(f1,f2))
-        plt.show()
+        #plt.show()
+        plt.savefig('{}_{}_scatter.png'.format(f1,f2))
         print(self.results.summary())
     
     def OLS_predict(self,theoretical_x):
