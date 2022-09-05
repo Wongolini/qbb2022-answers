@@ -91,9 +91,6 @@ class Visualise:
         ax.scatter(self.df[f1],self.df[f2])
         ax.set_xlabel(f1)
         ax.set_ylabel(f2)
-        #plt.savefig('{}_{}_scatter.png'.format(f1,f2))
-        #plt.show()
-        #plt.close()
         self.scatter_plot = ax 
 
 class Stats:
@@ -161,10 +158,7 @@ if __name__ == "__main__":
                           names=get_header(file2))
 
     all_data= merge_data(data1n, data2)
-    #V=Visualise(all_data)
-    
-    #V.cartesian('Mother_age','n_muts')
-    #V.cartesian('Father_age','n_muts')
+ 
     print('T-TEST')
     print(stats.ttest_ind(all_data["n_mother"],
                       all_data["n_father"]))
