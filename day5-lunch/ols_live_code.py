@@ -69,4 +69,5 @@ new_data['year'] = 2008
 # predict
 print('PREDICT')
 print(full_model.predict(new_data))
+print(reduced_model.predict(new_data))
 # %%

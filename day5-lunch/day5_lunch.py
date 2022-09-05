@@ -88,7 +88,7 @@ class Visualise:
     def cartesian(self,f1,f2):
         fig,ax = plt.subplots(figsize=[5,10])
         ax.set_title('{} vs {}'.format(f1,f2))
-        ax.scatter(self.df[f1],self.df[f2])
+        ax.scatter(self.df[f1],self.df[f2],alpha=.5)
         ax.set_xlabel(f1)
         ax.set_ylabel(f2)
         self.scatter_plot = ax 
@@ -108,34 +108,28 @@ class Stats:
         Is this relationship significant?
         What is the size of this relationship?
         '''
-        self.model = smf.ols(formula = "{} ~ 1 + {}".format(f2,f1), data = self.df)
-        self.results = self.model.fit()
-        self.record_stats['{}_{}_ols_pval'.format(f1,f2)] = self.results.pvalues
+        self.model = smf.ols(formula = "{} ~ 1 + {}".format(f2,f1), data = self.df).fit()
+     
+        self.record_stats['{}_{}_ols_pval'.format(f1,f2)] = self.model.pvalues
         V = Visualise(self.df)
         V.cartesian(f1,f2)        
         ax = V.scatter_plot
         x_theory = list(range(max(self.df[f1])))
-        y_predict = [self.results.params[1]*x+self.results.params[0] for x in x_theory]
+        y_predict = [self.model.params[1]*x+self.model.params[0] for x in x_theory]
         ax.plot(x_theory, y_predict,'r--')
         print('OLS on fields: {}, {}'.format(f1,f2))
         #plt.show()
         plt.savefig('{}_{}_scatter.png'.format(f1,f2))
-        print(self.results.summary())
+        print(self.model.summary())
     
-    def OLS_predict(self,theoretical_x):
-        # takes model from OLS and produces regression line
-        #theoretical_data = self.df.iloc[0]
-        #theoretical_data[f1] = theoretical_x
-        #theoretical_data[f2] = 9
-        #print('###########################################')
-        #print(theoretical_data)
-        #y=self.model.predict(theoretical_data)
-        #print(y)
-        predict_y = self.results.params[0]
-        for v in self.results.params[1:]:
-            predict_y+=v*theoretical_x
-        print(predict_y)
-        
+    def OLS_predict(self,f1,theoretical_x):
+        # takes model from OLS and produces regression line 
+        # predicts only for a single variabless
+        theoretical_data = pd.DataFrame(self.df.iloc[0]).transpose()
+        for col in theoretical_data:
+            theoretical_data[col] = 0
+        theoretical_data[f1] = theoretical_x
+        self.prediction=self.model.predict(theoretical_data)
 
 
 if __name__ == "__main__":
@@ -163,10 +157,18 @@ if __name__ == "__main__":
     print(stats.ttest_ind(all_data["n_mother"],
                       all_data["n_father"]))
 
-    S=Stats(all_data[['Father_age','n_muts']])
-    #S.OLS('Mother_age','n_muts',)
+    S=Stats(all_data)
+    S.OLS('Mother_age','n_muts',)
+    print(S.model.params,'Mother_age, n_muts')
+    print('Pval: ',S.model.pvalues)
     S.OLS('Father_age','n_muts')
-    S.OLS_predict(50.5)
+    print(S.model.params,'Father_age, n_muts')
+
+    print('Pval: ',S.model.pvalues)
+    S.OLS_predict('Father_age',50.5)
+    print('OLS MODEL PREDICTS \n Father_age={} --> n_muts={}'.format(50.5,S.prediction[0]))
+
+
 
 
 # %%
