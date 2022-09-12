@@ -1,4 +1,4 @@
-#%%
+#!/bin/bash/env python
 from scipy.stats import poisson
 import numpy as np 
 import matplotlib.pyplot as plt
@@ -60,6 +60,7 @@ def QQ(genome_vec,avg):
     plt.close()
     return r_value
 #%%
+print('Coverage = 5x sim')
 genome_vec = simulate_sequencing(5)
 plot_simulation(genome_vec, 5)
 
@@ -76,6 +77,7 @@ overlay a Poisson distribution with lambda=15,
 compute the number of bases with 0x coverage, and
 evaluate how well it matches the Poisson expectation.
 '''
+print('Coverage = 15x sim')
 genome_vec = simulate_sequencing(15)
 plot_simulation(genome_vec, 15)
 compute_0_cov(genome_vec)

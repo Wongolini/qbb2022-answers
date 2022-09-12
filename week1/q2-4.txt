@@ -1,0 +1,37 @@
+There are 4 contigs
+NODE_1_length_105830_cov_20.649193: length: 105830
+NODE_2_length_47860_cov_20.367392: length: 47860
+NODE_3_length_41351_cov_20.528098: length: 41351
+NODE_4_length_39426_cov_20.336388: length: 39426
+[105830, 47860, 41351, 39426]
+Largest contig is Node_1
+n50= 2
+
+[Alignments]
+1-to-1                             5                    5
+TotalLength                   233757               233757
+AvgLength                   46751.40             46751.40
+AvgIdentity                   100.00               100.00
+
+M-to-M                             5                    5
+TotalLength                   233757               233757
+AvgLength                   46751.40             46751.40
+AvgIdentity                   100.00               100.00
+
+longest alignment = 105830
+                                 REF                 ALT
+Total number of insertions
+Insertions                         5                    1
+InsertionSum                      51                  712
+InsertionAvg                   10.20               712.00
+Note than insertions in R can be viewed as deletions from Q.
+Ref has '5' insertions which could be 5 deletions
+There is 1 detected insertion
+ [S1]     [E1]  |     [S2]     [E2]  |  [LEN 1]  [LEN 2]  |  [% IDY]  | [TAGS]
+    3    26789  |        1    26787  |    26787    26787  |   100.00  | Halomonas    NODE_3_length_41351_cov_20.528098
+26788    40641  |    27498    41351  |    13854    13854  |   100.00  | Halomonas    NODE_3_length_41351_cov_20.528098
+The insertion begins at 26788 and ends at 27998.
+samtools faidx NODE_3_length_41351_cov_20.528098:26788-27498 > insertion.fasta
+The decoded message :  Congratulations to the 2022 CMDB @ JHU class!  Keep on looking for little green aliens..
+
+
