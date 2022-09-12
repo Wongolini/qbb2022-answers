@@ -1,4 +1,4 @@
-#!/bin/bash/env python
+#%%
 from scipy.stats import poisson
 import numpy as np 
 import matplotlib.pyplot as plt
@@ -41,9 +41,12 @@ def plot_simulation(genome_vec,avg):
     x = np.arange(0,max(genome_vec),.001)
     y1 = poisson.pmf(x, mu=np.average(genome_vec))
     y2 = poisson.pmf(x, mu=avg)
+    plt.title('Plot genome coverage simulation')
     plt.plot(x,y1,label='mu=empirical lambda {}'.format(np.average(genome_vec)))
     plt.plot(x,y2,'r--',label='mu={}'.format(avg),alpha=.5)
-    plt.hist(genome_vec,density=True,bins=15,alpha=.3,label='numpy')
+    plt.hist(genome_vec,density=True,bins=15,alpha=.3,label='aligned_hits_freq')
+    plt.xlabel('Number of hits')
+    plt.ylabel('Frequency')
     plt.legend()
     plt.show()
     plt.close()
@@ -56,11 +59,11 @@ def compute_0_cov(genome_vec):
 def QQ(genome_vec,avg):
     summary=stats.probplot(genome_vec, dist='poisson', sparams=(avg,), plot=plt, rvalue=True)
     slope, intercept, r_value, p_value, std_err = stats.linregress(summary[0][0], summary[0][1])
+    plt.title('QQ plot of simulated sequencing data vs Poisson(mu={})'.format(avg))
     plt.show()
     plt.close()
     return r_value
 #%%
-print('Coverage = 5x sim')
 genome_vec = simulate_sequencing(5)
 plot_simulation(genome_vec, 5)
 
@@ -77,7 +80,6 @@ overlay a Poisson distribution with lambda=15,
 compute the number of bases with 0x coverage, and
 evaluate how well it matches the Poisson expectation.
 '''
-print('Coverage = 15x sim')
 genome_vec = simulate_sequencing(15)
 plot_simulation(genome_vec, 15)
 compute_0_cov(genome_vec)
