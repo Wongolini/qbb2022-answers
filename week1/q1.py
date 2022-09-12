@@ -21,7 +21,6 @@ import random
 
 random.seed(25)
 #%%
-# this solution provides mu = 2.5
 def simulate_sequencing(coverage):
     genome_length = int(1e6)
     read_length = 100
@@ -31,9 +30,9 @@ def simulate_sequencing(coverage):
     for i in range(n_reads): # iterate thru number of reads s.t. coverage=5
         begin=np.random.randint(0,genome_length-100) #randomly choose a place in the genome
         end=begin+100 
-        random_sequence = np.ones(fragment_size,dtype=np.int32) # random array of hits/no_hits with length of fragment size
+        random_sequence = np.ones(fragment_size,dtype=np.int32) # random array of hits with length of fragment size
         # one could add noise to random_sequence to make the simulation more realistic
-        genome_vec[begin:end]+=random_sequence # add this 1/0 array to the genome_mat
+        genome_vec[begin:end]+=random_sequence # add this array to the genome_vec
     return genome_vec
 
 # Q 1.2
@@ -62,6 +61,7 @@ def QQ(genome_vec,avg):
     plt.title('QQ plot of simulated sequencing data vs Poisson(mu={})'.format(avg))
     plt.show()
     plt.close()
+    print('y={}x+{}'.format(slope,intercept))
     return r_value
 #%%
 genome_vec = simulate_sequencing(5)
