@@ -1,0 +1,15 @@
+1.1 
+
+50,000 reads for 5x coverage
+
+150,000 for 15x coverage
+
+1.2-1.4
+
+1.4
+
+QQ for poisson(mu=15) vs sorted data:
+
+regression:y=0.9977713101552332x+0.033432343214121474
+with r^2=.99
+so it is a good fit.
