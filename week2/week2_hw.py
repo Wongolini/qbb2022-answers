@@ -20,6 +20,7 @@ import numpy as np
 from Bio import SeqIO
 import argparse
 import matplotlib.pyplot as plt
+from fasta import readFASTA
 
 class ReadIn():
     def __init__(self,infile):
@@ -28,14 +29,18 @@ class ReadIn():
     
     def read_seq(self):
         # if there were more than 2 sequences, use a dictionary
-        for i,record in enumerate(SeqIO.parse(self.infile,'fasta')):
-            if i == 0:
-                self.query_id = record.id
-                self.query_seq = record.seq
-            if i == 1:
-                self.subject_id = record.id
-                self.subject_seq = record.seq
-
+        #for i,record in enumerate(SeqIO.parse(self.infile,'fasta')):
+        #    if i == 0:
+        #        self.query_id = record.id
+        #        self.query_seq = record.seq
+        #    if i == 1:
+        #        self.subject_id = record.id
+        #        self.subject_seq = record.seq
+        sequences = readFASTA(self.infile)
+        self.query_id = sequences[0][0]
+        self.query_seq = sequences[0][1]
+        self.subject_id = sequences[1][0]
+        self.subject_seq = sequences[1][1]
 
 class DNA_alignment(ReadIn):
     # HOXD70 scoring matrix
