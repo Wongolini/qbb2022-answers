@@ -93,31 +93,84 @@ class DNA_alignment(ReadIn):
                 self.f_mat[i,j] = max(hoxd_score,h,v)
     
     def calculate_score(self):
-        score_path = np.zeros((self.f_mat.shape[0]),dtype=np.int32)
-        for i in range(self.f_mat.shape[0])[::-1]: # iterate upwards through rows
-            row = self.f_mat[i]
-            if i == self.f_mat.shape[0]-1:
-                # next choice can be vertical or direct diagonal
-                best_index = np.argmax(row) # index of the max 
-                score_path[i] = best_index
+        traceback_mat = np.zeros((self.f_mat.shape[0], self.f_mat.shape[1]), dtype=np.int32)
+        score_list = []
+        movement_dict = {'d':[0,0], 's':[0,1],'q':[1,0]}
+        trace = []
+        i = self.f_mat.shape[0]
+        j = self.f_mat.shape[1]
+        movement = [i,j]
+        sub_f_mat = self.f_mat[movement[0]-2:movement[0], movement[1]-2:movement[1]] # slide tensor around f_mat
+
+        while i>=1 and j>=1: # iterate upwards through rows
+            if movement[0]==0 or movement[1]==0:
+                break 
+
             else:
-                #best_index = min(abs(np.argsort(row)[::-1]-best_index)) # look for the smallest difference... should be 0 or 1
-                prev_best_ind = score_path[i+1]
-                if row[prev_best_ind-1] > row[prev_best_ind]:
-                    score_path[i] = prev_best_ind-1
-                elif row[prev_best_ind-1] <= row[prev_best_ind]:
-                    score_path[i] = prev_best_ind
-    
-        self.score_path = score_path[::-1]
-        self.score = np.sum([self.f_mat[i][score] for i,score in enumerate(score_path)])
-        print('SCORE: ',self.score)
-        plt.plot(self.score_path,range(self.score_path.shape[0]))
-        #plt.xticks(list(range(len(self.subject_seq)))[::10],list(self.subject_seq)[::10],fontsize=5)
-        #plt.yticks(list(range(len(self.query_seq))[::20]),list(self.query_seq)[::20],fontsize=5)
-        plt.xlabel('SUBJECT index')
-        plt.ylabel('QUERY index')
-        plt.title('Alignment Score Path')
-        plt.show()
+                # decide to align or gap
+                # previous score is in (1,1) index
+                # rows are query seq
+                # columns are subject seq 
+
+                diag = sub_f_mat[0][0] # move diag
+                q_gap = sub_f_mat[1][0] # move up 
+                s_gap = sub_f_mat[0][1] # move left
+                if q_gap >= s_gap:
+                    choice = q_gap
+                    move_inds = [0,1]
+                    slide = 'q'
+                  
+                else:
+                    choice = s_gap 
+                    move_inds = [1,0]
+                    slide = 's'
+       
+                if diag>=choice: # align
+                    # move diag
+                    movement[0] = movement[0] - 1
+                    movement[1] = movement[1] - 1
+                    slide = 'd'
+                    i = i-1
+                    j = j-1
+                else: # do the gap
+                    movement[0] = movement[0] - move_inds[0]
+                    movement[1] = movement[1] - move_inds[1]
+                    i = i-movement_dict[slide][0]
+                    j = j-movement_dict[slide][1]
+                score_list.append(sub_f_mat[1,1])
+                sub_f_mat = self.f_mat[movement[0]-2:movement[0], movement[1]-2:movement[1]]
+                trace.append(slide)
+                
+            
+        print('score',self.f_mat[self.f_mat.shape[0]-1,self.f_mat.shape[1]-1])
+        seq1_ind = 0
+        seq2_ind = 0
+        aligned_seq1 = []
+        aligned_seq2 = []
+        for m in trace[::-1]:
+            if m=='s':
+                aligned_seq2.append('-')
+                aligned_seq1.append(self.query_seq[seq1_ind])
+                seq1_ind += 1
+            if m=='q':
+                aligned_seq1.append('-')
+                aligned_seq2.append(self.subject_seq[seq2_ind])
+                seq2_ind += 1
+            else:
+                aligned_seq1.append(self.query_seq[seq1_ind])
+                aligned_seq2.append(self.query_seq[seq2_ind])
+                seq1_ind+=1
+                seq2_ind+=1
+        with open('./aligned.fasta','w') as f:
+            f.write('>{} ALIGNED\n'.format(self.query_id))
+            f.write(''.join(aligned_seq1))
+            f.write('\n>{} ALIGNED\n'.format(self.subject_id))
+            f.write(''.join(aligned_seq2))
+                
+        '''
+        (aligning -> gap in sequence 1 -> gap in sequence 2).
+        (align --> q_gap --> s_gap)
+        '''
 
 
 class AA_alignment(DNA_alignment):

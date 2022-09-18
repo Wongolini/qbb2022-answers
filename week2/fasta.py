@@ -25,23 +25,25 @@ class FASTAReader( object ):
 
         if self.last_ident is not None: #not first line
             ident = self.last_ident
-
+        
         else: #indicates first line
-            line = self.file.readline()
-            assert line.startswith(">"), "Not a FASTA file"
-            ident = line[1:].rstrip("\r\n")
+            with open(self.file) as f:
+                line = f.readline()
+                assert line.startswith(">"), "Not a FASTA file"
+                ident = line[1:].rstrip("\r\n")
 
         sequences = []
         while True:
-            line = self.file.readline()
-            if line == "":
-                self.eof = True
-                break
-            elif not line.startswith(">"):
-                sequences.append( line.strip())
-            else:
-                self.last_ident = line[1:].rstrip("\r\n")
-                break
+            with open(self.file) as f:
+                line = f.readline()
+                if line == "":
+                    self.eof = True
+                    break
+                elif not line.startswith(">"):
+                    sequences.append( line.strip())
+                else:
+                    self.last_ident = line[1:].rstrip("\r\n")
+                    break
 
         sequence = "".join(sequences) #delimiter.join(what you want to join)
         return ident, sequence
@@ -51,25 +53,26 @@ class FASTAReader( object ):
 # Each tuple represents a single sequence in the fasta file, and has two elements.
 # The first element is the sequence ID, the second is the actual sequence.
 def readFASTA(file):
-    line = file.readline()
+    with open(file) as f:
+        line = f.readline()
 
-    assert line.startswith('>'), "Not a FASTA file"
+        assert line.startswith('>'), "Not a FASTA file"
 
-    seq_id = line[1:].rstrip('\r\n')
-    sequence = ''
-    line = file.readline()
-    sequences = []
+        seq_id = line[1:].rstrip('\r\n')
+        sequence = ''
+        line = f.readline()
+        sequences = []
 
-    while line:
-        if line.startswith('>'):
-            sequences.append((seq_id, ''.join(sequence)))
-            seq_id = line[1:].rstrip('\r\n')
-            sequence = ''
-        else:
-            sequence += line.strip()
+        while line:
+            if line.startswith('>'):
+                sequences.append((seq_id, ''.join(sequence)))
+                seq_id = line[1:].rstrip('\r\n')
+                sequence = ''
+            else:
+                sequence += line.strip()
 
-        line = file.readline()
+            line = f.readline()
 
-    sequences.append((seq_id, sequence))
+        sequences.append((seq_id, sequence))
 
     return sequences
