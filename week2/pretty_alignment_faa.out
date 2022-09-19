@@ -1,0 +1,91 @@
+score 3796
+#######################################################
+S1: ENSP00000264010.4|ENST00000264010.10|ENSG00000102974.16|OTTHUMG00000137539.7|OTTHUMT00000268870.4|CTCF-201|CTCF|727
+S2: ENSMUSP00000005841.10|ENSMUST00000005841.16|ENSMUSG00000005698.16|OTTMUSG00000017298.1|OTTMUST00000041960.1|Ctcf-201|Ctcf|736
+#######################################################
+
+
+                                                     
+S1 MEGDAVEAIVEESETFIKGKERKTYQRRREGGQEEDACHLPQNQTDGGEV 50
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 MEGDAVEAIVEESETFIKGKERKTYQRRREGGQEEDACHLPQNQTDGGEV
+
+
+                                                     
+S1 VQDVNSSVQMVMMEQLDPTLLQMKTEVMEGTVAPEAEAAVDDTQIITLQV 100
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 VQDVNSSVQMVMMEQLDPTLLQMKTEVMEGTVAPEAEAAVDDTQIITLQV
+
+
+                                                     
+S1 VNMEEQPINIGELQLVQVPVPVTVPVATTSVEELQGAYENEVSKEGLAES 150
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 VNMEEQPINIGELQLVQVPVPVTVPVATTSVEELQGAYENEVSKEGLAES
+
+
+                                                     
+S1 EPMICHTLPLPEGFQVVKVGANGEVETLEQGELPPQEDPSWQKDPDYQPP 200
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 EPMICHTLPLPEGFQVVKVGANGEVETLEQGELPPQEDPSWQKDPDYQPP
+
+
+                                                     
+S1 AKKTKKTKKSKLRYTEEGKDVDVSVYDFEEEQQEGLLSEVNAEKVVGNMK 250
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 AKKTKKTKKSKLRYTEEGKDVDVSVYDFEEEQQEGLLSEVNAEKVVGNMK
+
+
+                                                     
+S1 PPKPTKIKKKGVKKTFQCELCSYTCPRRSNLDRHMKSHTDERPHKCHLCG 300
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 PPKPTKIKKKGVKKTFQCELCSYTCPRRSNLDRHMKSHTDERPHKCHLCG
+
+
+                                                     
+S1 RAFRTVTLLRNHLNTHTGTRPHKCPDCDMAFVTSGELVRHRRYKHTHEKP 350
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 RAFRTVTLLRNHLNTHTGTRPHKCPDCDMAFVTSGELVRHRRYKHTHEKP
+
+
+                                                     
+S1 FKCSMCDYASVEVSKLKRHIRSHTGERPFQCSLCSYASRDTYKLKRHMRT 400
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 FKCSMCDYASVEVSKLKRHIRSHTGERPFQCSLCSYASRDTYKLKRHMRT
+
+
+                                                     
+S1 HSGEKPYECYICHARFTQSGTMKMHILQKHTENVAKFHCPHCDTVIARKS 450
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 HSGEKPYECYICHARFTQSGTMKMHILQKHTENVAKFHCPHCDTVIARKS
+
+
+                                                     
+S1 DLGVHLRKQHSYIEQGKKCRYCDAVFHERYALIQHQKSHKNEKRFKCDQC 500
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 DLGVHLRKQHSYIEQGKKCRYCDAVFHERYALIQHQKSHKNEKRFKCDQC
+
+
+                                                     
+S1 DYACRQERHMIMHKRTHTGEKPYACSHCDKTFRQKQLLDMHFKRYHDPNF 550
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 DYACRQERHMIMHKRTHTGEKPYACSHCDKTFRQKQLLDMHFKRYHDPNF
+
+
+                                                     
+S1 VPAAFVCSKCGKTFTRRNTMARHADNCAGPDGVEGENGGETKKSKRGRKR 600
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+S2 VPAAFVCSKCGKTFTRRNTMARHADNCAGPDGVEGENGGETKKSKRGRKR
+
+
+         *** ********** ****  ***********************
+S1 KMRSKK-EDSSDSENAEPDLDDNEDEEEPAVEIEPEPEPQ--------PV 650
+   ||||||   |          |    ||                       
+S2 KMRSKKEDSSDSENAEPDLDDNEDEEEPAVEIEPEPEPQPPQPPPPPQKK
+
+
+   ****  *********** ********************** ******** 
+S1 TPAPPPAKKRRGRPPGRTNQPKQNQPTAIIQVEDQNTGAIENIIVEVKKE 700
+       ||           |                      |        |
+S2 RRGRPPGRTNQPKQNQPTAIIQVEDQNTGAIENIIVEVKKEPDAEPAEGE
+
+

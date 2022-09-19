@@ -1,0 +1,463 @@
+score 266331
+#######################################################
+S1: ENST00000264010.10|ENSG00000102974.16|OTTHUMG00000137539.7|OTTHUMT00000268870.4|CTCF-201|CTCF|3814|UTR5:1-325|CDS:326-2509|UTR3:2510-3814|
+S2: ENSMUST00000005841.16|ENSMUSG00000005698.16|OTTMUSG00000017298.1|OTTMUST00000041960.1|Ctcf-201|Ctcf|3782|UTR5:1-268|CDS:269-2479|UTR3:2480-3782|
+#######################################################
+
+
+      **** **** ***** * ** ** ********* *************
+S1 GACGCAGGCGCACTGCACCGCGCC-GCCGCCATTTTGTGTCTGA-GCCTG 50
+   |||    |    |     | |  |  |         |             
+S2 GAC-GCAGGCG-CAC-TGCACCGCC-C-C-G-C-C-G-CCA-TTCTGTGT
+
+
+   ** ****** ******* *********** * ***** ***** ******
+S1 TGGAGCGATTAAACCGTGCGCGG-AGCTGCTTCTTTGGCGGCAGCGGCGG 100
+     |      |       |           | |     |     |      
+S2 CTG-AGC-CTGTGG-A-G-CG-AGTAAACCGT-G-C-G-C-G-G-A-G-C
+
+
+   ************* ****** *** *** *************** *** *
+S1 CGGCGGTGGCCGGTGCGGACGCGCGGAGCTCGCCGGAGACGCCGGGTGGC 150
+                |      |   |   |               |   | 
+S2 -T-G-C-T-T-C-T-T-TG-G-C-G-G-C-A-G-C-G-G-C-G-G-C-G-
+
+
+   **** *** * * **** *** **  *   **  ** ** *******   
+S1 CGGAGCCGTGGAGCGGCGGCGGAGCGGGCGCCGCGGGGGGTGTGGCGCGG 200
+       |   | | |    |   |  || |||  ||  |  |       |||
+S2 G-C-G-G-T-G-G-CCGGTGCGGACGCGCGGAGCTCGCCGGAGACGCCGG
+
+
+   ********** * **** **  ****  * ** ***   ** *  *** *
+S1 AGAATGATTACGGACCTGAAGCCAAAGAACAAGATGCGCTAGTGGACAGA 250
+             | |    |  ||    || |  |   |||  | ||   | 
+S2 GTGGCCGGAGCCGTGGAGCGGCGGCGGAGCGGGCGCCGCGGGGGGTGTGG
+
+
+   ********** ******  ****** ***** ********** * * * *
+S1 TTGCTGACCAGGGGCTTGAGAGCTGGGTTCTATTT-T-CC-CTCCTCAAA 300
+             |      ||      |     |          | | | | 
+S2 CGCGGAGAATGATTACGGACCTGAAGCCA-AAG-ATCC-ATATGCGCTAG
+
+
+   **   *********  *** * *** * *****  ******* * **  *
+S1 CTGACTTTGCAGCCACGGAGAGGCAGGGGAAATGGAAGGTGATGCAGTCG 350
+     |||         ||   | |   | |     ||       | |  || 
+S2 TGGACAGATTGCTGACCAGGGGCTTGAGAGCTGGGTTCTATTTTCCCTCC
+
+
+   ****** ****** *  * **** ***** **** ******** *  ***
+S1 AAGCCATTGTGGAGGAGTCCGAAACTTTTATTAAAGGAAAGGAGAGAAAG 400
+         |      | || |    |     |    |        | ||   
+S2 TCAAACTGACTTTGCAGCCACGGAGAGGCAGGGGAAATGGAAGGTGATGC
+
+
+    * ********** ** * *  *** ** ***** ** ************
+S1 ACTTACCAGAGACGCCGGGAAGGGGGCCAGGAAGAAGATGCCTGCCACTT 450
+   | |          |  | | ||   |  |     |  |            
+S2 AGTCGAAGCCATTGTGGAGGAGTCCGAAACTTTTATTAAAGGAAAGGAGA
+
+
+   ***** **** **** *****   ***  * ************** ****
+S1 ACCCCAGAACCAGACGGATGGGGGTGAGGTGGTCCAGGATGTCAACAGCA 500
+        |    |    |     |||   || |              |    
+S2 GAAAGACTTACCAGAGACGCCGGGAAGGGGGCCAGGAAGAAGATGCCTGC
+
+
+   *** ******* ******** * ** ** ********* ***********
+S1 GTGTACAGATGGTGATGATGGAACAGCTGGACCCCACCCTTCTTCAGATG 550
+      |       |        | |  |  |         |           
+S2 CACTTACCCCAGAACCAGACGGATGGGGGTGAGGTGGTCCAGGATGTCAA
+
+
+   *  ******** *** ** ***** *** ** * * * ** **  *  **
+S1 AAGACTGAAGTAATGGAGGGCACAGTGGCTCCAGAAGCAGAGGCTGCTGT 600
+    ||        |   |  |     |   |  | | | |  |  || ||  
+S2 CAGCAGTGTACAGATGGTGATGATGGAACAGCTGGACCCCACCCTTCTTC
+
+
+   *  *  *** *** *  ********  ***  ***** ******* ****
+S1 GGACGATACCCAGATTATAACTTTACAGGTTGTAAATATGGAGGAACAGC 650
+    || ||   |   | ||        ||   ||     |       |    
+S2 AGATGAAGACTGAAGTAATGGAGGGCACAGTGGCTCCAGAAGCAGAGGCT
+
+
+   * ******** ***** ** * *****  **  **** *****  *****
+S1 CCATAAACATAGGAGAACTTCAGCTTGTTCAAGTACCTGTTCCTGTGACT 700
+    |        |     |  | |     ||  ||    |     ||     
+S2 GCTGTGGACGATACCCAGATTATAACTTTACAGGTTGTAAATATGGAGGA
+
+
+   ** * *** ****** **** *****  **** **** ** * * *****
+S1 GTACCTGTTGCTACCACTTCAGTAGAAGAACTTCAGGGGGCTTATGAAAA 750
+     | |   |      |    |     ||    |    |  | | |     
+S2 ACAGCCCATAAACATAGGAGAACTTCAGCTTGTTCAAGTACCTGTTCCTG
+
+
+      ***** *********  ********  *** * ********  ****
+S1 TGAAGTGTCTAAAGAGGGCCTTGCGGAAAGTGAACCCATGATATGCCACA 800
+   |||     |         ||        ||   | |        ||    
+S2 TGACTGTACCTGTTGCTACCACTTCAGTAGAAGAACTTCAGGGGGCTTAT
+
+
+   **** **********  * **** ***** **  ***********  ***
+S1 CCCTACCTTTGCCTGAAGGGTTTCAGGTGGTTAAAGTGGGGGCCAATGGA 850
+       |          || |    |     |  ||           ||   
+S2 GAAAATGAAGTGTCTAAAGAGGGCCTTGCGGAAAGTGAACCCATGATATG
+
+
+   *********  ** * **** *   ************ **** *******
+S1 GAGGTGGAGACACTAGAACAAGGGGAACTTCCACCCCAGGAAGATCCTAG 900
+            ||  | |    | |||            |    |       
+S2 CCACACCCTACCTTTGCCTGAAGGGTTTCAGGTGGTTAAAGTGGGGGCCA
+
+
+   *   ** *** ******************* * **** ***  *** * *
+S1 TTGGCAAAAAGACCCAGACTATCAGCCACCAGCCAAAAAAACAAAGAAAA 950
+    |||  |   |                   | |    |   ||   | | 
+S2 ATGGAGAGGTGGAGACACTAGAACAAGGGGAACTTCCACCCCAGGAAGAT
+
+
+     * *** ***   *** ******* *** ****  *** *** * ****
+S1 CCAAAAAGAGCAAACTGCGTTATACAGAGGAGGGCAAAGATGTAGATGTG 1000
+   || |   |   |||   |       |   |    ||   |   | |    
+S2 CCTAGTTGGCAAAAAGACCCAGACTATCAGCCACCAGCCAAAAAAACAAA
+
+
+   ***** * ** ***** **** ****** ****  ***  * ** *****
+S1 TCTGTCTACGATTTTGAGGAAGAACAGCAGGAGGGTCTGCTATCAGAGGT 1050
+        | |  |     |    |      |    ||   || |  |     
+S2 GAAAACCAAAAAGAGCAAACTGCGTTATACAGAGGAGGGCAAAGATGTAG
+
+
+   ***  ******* ****  * **** ** *** *** ** * ** * ** 
+S1 TAATGCAGAGAAAGTGGTTGGTAATATGAAGCCTCCAAAGCCAACAAAAA 1100
+      ||       |    || |    |  |   |   |  | |  | |  |
+S2 ATGTGTCTGTCTACGATTTTGAGGAAGAACAGCAGGAGGGTCTGCTATCA
+
+
+   ****** ***** * *  ******** *** **** ************  
+S1 TTAAAAAGAAAGGTGTAAAGAAGACATTCCAGTGTGAGCTTTGCAGTTAC 1150
+         |     | | ||        |   |    |            ||
+S2 GAGGTTAATGCAGAGAAAGTGGTTGGTAATATGAAGCCTCCAAAGCCAAC
+
+
+    **** ** *********** ***  ************** ******** 
+S1 ACGTGTCCACGGCGTTCAAATTTGGATCGTCACATGAAAAGCCACACTGA 1200
+   |    |  |           |   ||              |        |
+S2 AAAAATTAAAAAGAAAGGTGTAAAGAAGACATTCCAGTGTGAGCTTTGCA
+
+
+   ************  * ********* *   *** *  *****  ******
+S1 TGAGAGACCACACAAGTGCCATCTCTGTGGCAGGGCATTCAGAACAGTCA 1250
+               || |         | |||   | ||     ||      
+S2 GTTACACGTGTCCACGGCGTTCAAATTTGGATCGTCACATGAAAAGCCAC
+
+
+   * ********  ***** ******  ******* ***** ***   *  *
+S1 CCCTCCTGAGGAATCACCTTAACACACACACAGGTACTCGTCCTCACAAG 1300
+    |        ||     |      ||       |     |   ||| || 
+S2 ACTGATGAGAGACCACACAAGTGCCATCTCTGTGGCAGGGCATTCAGAAC
+
+
+   * * ********  ***** *** *****  ******** **********
+S1 TGCCCAGACTGCGACATGGCCTTTGTGACCAGTGGAGAATTGGTTCGGCA 1350
+    | |        ||     |   |     ||        |          
+S2 AGTCACCCTCCTGAGGAATCACCTTAACACACACACAGGTACTCGTCCTC
+
+
+   * *******  *  *****  * ********** *    ****  ** **
+S1 TCGTCGTTACAAACACACCCACGAGAAGCCATTCAAGTGTTCCATGTGCG 1400
+    |       || ||     || |          | ||||    ||  |  
+S2 ACAAGTGCCCAGACTGCGACATGGCCTTTGTGACCAGTGGAGAATTGGTT
+
+
+   ****** *****  *  ***** ** ** *  ************ **   
+S1 ATTACGCCAGTGTAGAAGTCAGCAAATTAAAACGTCACATTCGCTCTCAT 1450
+         |     || ||     |  |  | ||            |  |||
+S2 CGGCATCGTCGTTACAAACACACCCACGAGAAGCCATTCAAGTGTTCCAT
+
+
+   ****  ***  * *  * **** ********** ****** ****** **
+S1 ACTGGAGAGCGTCCGTTTCAGTGCAGTTTGTGCAGTTATGCCAGCAGGGA 1500
+       ||   || | || |    |          |      |      |  
+S2 GTGCGATTACGCCAGTGTAGAAGTCAGCAAATTAAAACGTCACATTCGCT
+
+
+    *     ** *********************** ***** ** *** ***
+S1 CACATACAAGCTGAAAAGGCACATGAGAACCCATTCAGGGGAAAAGCCTT 1550
+   | |||||  |                       |     |  |   |   
+S2 CTCATACTGGAGAGCGTCCGTTTCAGTGCAGTTTGTGCAGTTATGCCAGC
+
+
+    * * *********** * ********* **** ******* *****  *
+S1 ATGAATGTTATATTTGTCATGCTCGGTTTACCCAAAGTGGTACCATGAAG 1600
+   | | |           | |         |    |       |     || 
+S2 AGGGACACATACAAGCTGAAAAGGCACATGAGAACCCATTCAGGGGAAAA
+
+
+   ********** ***** *****  ******  *** ** ****** ** *
+S1 ATGCACATTTTACAGAAGCACACAGAAAATGTGGCCAAATTTCACTGTCC 1650
+             |     |     ||      ||   |  |      |  | 
+S2 GCCTTATGAATGTTATATTTGTCATGCTCGGTTTACCCAAAGTGGTACCA
+
+
+   ** ***  ****** * *  **** * *  ** * **  ******* ** 
+S1 CCACTGTGACACAGTCATAGCCCGAAAAAGTGATTTGGGTGTCCACTTGC 1700
+     |   ||      | | ||    | | ||  | |  ||       |  |
+S2 TGAAGATGCACATTTTACAGAAGCACACAGAAAATGTGGCCAAATTTCAC
+
+
+   ***** ** ** *** * * * *******  *  *  *** ***   ***
+S1 GAAAGCAGCATTCCTATATTGAGCAAGGCAAGAAATGCCGTTACTGTGAT 1750
+        |  |  |   | | | |       || || ||   |   |||   
+S2 TGTCCCCACTGTGACACAGTCATAGCCCGAAAAAGTGATTTGGGTGTCCA
+
+
+   **  * ****** **** **************   ** * * * ******
+S1 GCTGTGTTTCATGAGCGCTATGCCCTCATCCAGCATCAGAAGTCACACAA 1800
+     || |      |    |              |||  | | | |      
+S2 CTTGCGAAAGCAGCATTCCTATATTGAGCAAGGCAAGAAATGCCGTTACT
+
+
+    ************ **************** *  ***  * **** ****
+S1 GAATGAGAAGCGCTTTAAGTGTGACCAGTGTGATTACGCTTGTAGACAGG 1850
+   |            |                | ||   || |    |    
+S2 GTGATGCTGTGTTTCATGAGCGCTATGCCCTCATCCAGCATCAGAAGTCA
+
+
+   ****** *********  *** ******* ****** **********  *
+S1 AGAGGCACATGATCATGCACAAGCGCACCCACACCGGGGAGAAGCCTTAC 1900
+         |         ||   |       |      |          || 
+S2 CACAAGAATGAGAAGCGCTTTAAGTGTGACCAGTGTGATTACGCTTGTAG
+
+
+   * ** **********   * ** *******  ****  * *****  ***
+S1 GCCTGCAGCCACTGCGATAAGACCTTCCGCCAGAAGCAGCTTCTCGACAT 1950
+    |  |          ||| |  |       ||    || |     ||   
+S2 ACAGGAGAGGCACATGATCATGCACAAGCGCACCCACACCGGGGAGAAGC
+
+
+   ****** **  ***** *********  * ****  * **  *** ****
+S1 GCACTTCAAGCGCTATCACGACCCCAACTTCGTCCCTGCGGCTTTTGTCT 2000
+         |  ||     |         || |    || |  ||   |    
+S2 CTTACGCCTGCAGCCACTGCGATAAGACCTTCCGCCAGAAGCAGCTTCTC
+
+
+    *** ***** ********  ****  ** **** ********** *** 
+S1 GTTCTAAGTGTGGGAAAACATTTACACGTCGGAATACCATGGCAAGACAT 2050
+   |   |     |        ||    ||  |    |          |   |
+S2 GACATGCACTTCAAGCGCTATCACGACCCCAACTTCGTCCCTGCGGCTTT
+
+
+   ** ****** ** *** *** * ********* **    * ****  ** 
+S1 GCTGATAATTGTGCTGGCCCAGATGGCGTAGAGGGGGAAAATGGAGGAGA 2100
+     |      |  |   |   | |         |  |||| |    ||  |
+S2 TGTCTGTTCTAAGTGTGGGAAAACATTTACACGTCGGAATACCATGGCAA
+
+
+   *  ************** ** **** * * **** *** ****  *****
+S1 AACGAAGAAGAGTAAACGTGGAAGAAAAAGAAAGATGCGCTCTAAGAAAG 2150
+    ||              |  |    | | |    |   |    ||     
+S2 GACATGCTGATAATTGTGCTGGCCCAGATGGCGTAGAGGGGGAAAATGGA
+
+
+   ******* ***  *****   ****** *** * ****  * ****** *
+S1 AAGATTCCTCTGACAGTGAAAATGCTGAACCAGATCTGGACGACAATGAG 2200
+          |   ||     |||      |   | |    || |      | 
+S2 GGAGAAACGAAGAAGAGTAAACGTGGAAGAAAAAGAAAGATGCGCTCTAA
+
+
+     ********************* *  ***** * ***** * ** **  
+S1 GAT---GAGGAGGAGCCTGCCGTAGAAATTGAACCTGAGCCAGAGCCTCA 2250
+   ||                     | ||     | |     | |  |  ||
+S2 GAAGGAAGATTCCTCTGACAGTGAAAATGCTGAACCAGATCTGGACGACA
+
+
+   **** *******  *** **** *****  ********   ** ***** 
+S1 GCCTGTGACCCCAGCCCCACCACCCGCCAAGAAGCGGAGAGGACGACC-C 2300
+       |       ||   |    |     ||        |||  |     |
+S2 ATGAGGATGAGGAGGAGCCTGCCGTAGAAATTGAACCTGAGC-CAGAGGC
+
+
+   * * * ******* **************************  *** ****
+S1 CCTGGC--A-GAAC---------------------CAACCAGCCCAAACA 2350
+    | | |       |                          ||   |    
+S2 TCAGCCGATAACCCGGCGACCTCCTGGAAGAACCAAGCGGAGAGGACGAC
+
+
+   *** **  ** ***********  ****   ******  * **** ****
+S1 GAACCAGCCAACAGCTATCATTCAGGTTGAAGACCAGAATACAGGTGCAA 2400
+      |  ||  |           ||    |||      || |    |    
+S2 CCCCTGGCAGAACCAACCAGCCCAAACAGAACCAGCCAACAGCTATCATT
+
+
+   ** ***** ****  *** *******  ****** *  ** *********
+S1 TTGAGAACATTATAGTTGAAGTAAAAAAAGAGCCAGATGCTGAGCCCGCA 2450
+     |     |    ||   |       ||      | ||  |         
+S2 CAGGTTGAAGACCAGAATACAGGTGCAATTGAGAACATTATAGTTGAAGT
+
+
+   * *** *** ************** ***** ** *  ********** **
+S1 GAGGGAGAGGAAGAGGAGGCCCAGCCAGCTGCCACAGATGCCCCCAACGG 2500
+    |   |   |              |     |  | ||          |  
+S2 AAAAAAAGAGCCAGATGCTGAGCCCGCAGAGGGAGAGGAAGAGGAGGCCC
+
+
+     * ** *** * ********  *** * ******  ****  *******
+S1 AGACCTCACGCCCGAGATGATCCTCAGCATGATGGACCGGTGATGGCGGA 2550
+   || |  |   | |        ||   | |      ||    ||       
+S2 AGCCAGCTGCCACAGATGCCCCCAACGGAGACCTCACGCCCGAGATGATC
+
+
+   ** ******* * * *  *** ** * *  **   ************ * 
+S1 GCCTTGTGCGTCGCCAGGACTTCTCTGGGCTGTGTTTAAACGGCCCGCAT 2600
+     |       | | | ||   |  | | ||  |||            | |
+S2 CTCAGCATGATGGACCGGTGATGGCGGAGCCTTGTGCGTCGCCAGGACTT
+
+
+     *************  *************** ********** * **  
+S1 CTTAATTTTTCTCCCTTCTTTCTTTTTTTGGCTTTGGGAAAAGCATCATT 2650
+   ||             ||               |          | |  ||
+S2 CTCTGGG-C-TGTGTTTAAACGGCCCGCATCTTAATTTTTCTCCCTTCTT
+
+
+    *************** **  * * ***  ** *** **  *** ** **
+S1 TTACCAAACAT--ACCGAGAACGAAAACTTC-A---AGGATGATGTTAGA 2700
+   |               |  || | |   ||  |   |  ||   |  |  
+S2 TCTTTTTTTGGACTTGGGAAAAGCATCATTTTAAAGAACATACCGAGAAC
+
+
+   *    * *** ****** *** **************   ******* ***
+S1 AAAAAATGTGATTTAACTAGAACTTGCTGTCTGATGTTAGCAAATCATGG 2750
+    |||| |   |      |   |              |||       |   
+S2 GAAAACTTCAAGGATGATGTTAGAAAAAAATGTGATTTAA-C-TAGAACT
+
+
+   *****     ************* **  ** *  *     ** ****** 
+S1 AATGTTCTGAGTCCCTGAGGGTTTACTGTGAAGTGCTGAGGACAGTGTTG 2800
+        |||||             |  ||  | || |||||  |      |
+S2 TGCTGTCTGATGT-TA-G-CAAATCATGGAATGTTCTGAGTCCCTGAGGG
+
+
+   ***   *****  ** ******* ******* *** ********   ***
+S1 ACAACTAACTCGTTTTCCTAGATGGAAACGGAGACATTGACCCCTCCCTC 2850
+      |||     ||  |       |       |   |        |||   
+S2 TTTACTGTGAAGTGCTGAGGACAGTGTTGACAACTAACTCGTTTTCCTAG
+
+
+   *** ****** **** ** ******  *   * ************  * *
+S1 CATGTGGTAAACCACTCCAGAATGGCCACCAGGCTTCCCAGAG-TTCTAT 2900
+      |      |    |  |      || ||| |            || | 
+S2 ATGGAAACGGAGACATTGACCCCTCCCTCCATGTGGTAA-ACCCCTCCAG
+
+
+   ** *** ** ***************** * ******* * ****  ** *
+S1 GGTCTTCTTCCCAAGAGAGTTTTTAATTGTAAATGCATACTTGGGAAGGA 2950
+     |   |  |                 | |       | |    ||  | 
+S2 AATGGCCACCAGGCTTCCCAG-AGTTCTATGGTCTTCTTCCCAAGAGAGT
+
+
+   * *******  ** ****** ************* **** ** *****  
+S1 CTTAGAGTTTTAAACTGTTTTTTGCTTTTGCTTTTCCCTGACTCCCTTTG 3000
+    |       ||  |      |             |    |  |     ||
+S2 -T-TT-TAATTGTAAATGCATACTTGGGAAGGACTTAGAGTTTTAAACTG
+
+
+   *  *** ************ ** *************** ***********
+S1 CTTGGAGTCAGCTGCACACCAGTAGTATGGCATGCTACGATCAGGTTCTG 3050
+    ||   |            |  |               |           
+S2 TTTTTTGCTTTTGCT-TTTCCCTGACTCCCTT-TGCTTGGAGTCAGCTGC
+
+
+   * *** **** *  * **** *****  *** * * ** ***** *****
+S1 TCCTGAAAGCTTTGCCTCTTTCTTGGCAAAGTTTCTGGTATGGTCAAGCT 3100
+    |   |    | || |    |     ||   | | |  |     |     
+S2 ACACCAGTAGTATGGCATGCTACGATCAGGTTCTGTCCTGAAAGCTTTGC
+
+
+   **************** *** **  *** **** * ** *** ****  *
+S1 TGTAAATAACTTTTTTTACATTTTAATCTTTTCCATTAATTAAGAGGTTG 3150
+                   |   |  ||   |    | |  |   |    || 
+S2 CTCTTTCTTGGCAAAGTTTCTGGTATGGTCAAGCTTGTAAATAACTTTTT
+
+
+   ** ***** **** * *** ** *** ** **  * ** *** *** * *
+S1 AAAAGAAGTGCAGTGTAAGAAAACCCAGCATTTTAATTACTTGCAAATTA 3200
+     |     |    | |   |  |   |  |  || |  |   |   | | 
+S2 TTACATTTTAATCTTTTCCATTAATTAAGAGGTTGAAAAGAAGTGCAGTG
+
+
+   **** **  ** *** * **** ************ *** ******* * 
+S1 AGTTACCACAGACTCTGTAGTGTGTAAATGTTGACAAGGAATTGGATCAC 3250
+       |  ||  |   | |    |            |   |       | |
+S2 TAAGAAAACCCAGCATTTTAATTACTTGCAAATTAAGTTACCACAGACTC
+
+
+   ** **   *** * **** *  **** * ****** *  ****  ** * 
+S1 AATCATGTAGCAGAAT-GG-CA-CCCAGACCACTGCCCACCAGTGACGGA 3300
+     |  |||   | |    | ||    | |      | ||    ||  | |
+S2 TGTAGTGTGTAA-ATGCTGTCAGG-GA-ATTGGATCACAATCATGTAGCA
+
+
+   * **** ****************** *******     ******** * *
+S1 CATGCACGTGGCAGATCATGATTTCCAGC-CC-ACGGAGCCAGCATTTGA 3350
+    |    |                  |       |||||        | | 
+S2 GAATGGCACCCAGACCA-CTGCCCACC-AC-TTACGGACATGCACGTGGC
+
+
+    ** ** **** ** ****** ***** ************** * **  *
+S1 ACCTTGTATAATTAACTTTCAGTTATGATTTCCCATCGACATTTTCTTTG 3400
+   |  |  |    |  |      |     |              | |  || 
+S2 AGATCATGATTTCCAGCCCACGGAGCCAGCATTTGAACCTTGTATAATTA
+
+
+   * * *****  ***** ****** *** * *** ****     *******
+S1 CCCTGTTTGTAGCTGATTGTTGTGTTTTATAAATC-TTCTGTTAAGGCAG 3450
+    | |     ||     |      |   | |   |    |||||       
+S2 ACTTTCAGTTATGATTTCCCATCGACATTTTCTTTTCCCTGTTTGTAGCT
+
+
+   * **  ** ** *** ***  ************ ** * ***********
+S1 AAGGGTGATTATGAGTGGTTCACAGCAGCCCTTA-TAAGCTG--GGCCAG 3500
+    |  ||  |  |   |   ||            |  | |           
+S2 GATTGTTGTGTTTTATAAATCTTCTGTTAAGGCAGAAGG-GTGGTTATGA
+
+
+   ****** **  **  ******   ** **** ** * **  ** ** ***
+S1 -AAAA-TTTCACTAG-GTCAGTAATTTAAACCTTGGATCTTCAAAAAATA 3550
+         |  ||  ||      |||  |    |  | |  ||  |  |   
+S2 A-TGGTTCACAGCAGCCCTTATAAGCTGG-GCCAGAAAATTTCACTAGGT
+
+
+   * *    * *  * **********     * * ********* * * ***
+S1 AAATAATGTGAAGCAAAACCAACTAAAAAGTGATTCTTGCACATGAACTG 3600
+    | |||| | || |          ||||| | |         | | |   
+S2 CAGTAATTTAAACCTTGGATCTTCAAAAAATAAAATAATGTGAAGCAAAA
+
+
+   *  ** ****** * ****  **** *** ** *** ***** *** *  
+S1 TCACAT----GTTTAAAAATGTGTTTTTTAGAGAGCCT-CAGTCTTACTG 3650
+    ||  |      | |    ||    |   |  |   |     |   | ||
+S2 CCAACTATATAGTGATTCTTGCACAT-GAACTGTCACACGTTTAAAAATG
+
+
+   **  ************  **   * *** ***  ** ** * **** ***
+S1 ATTTCAAACACTTTTTTCT-TCTGTGTATTGCTTTTAAGAGAGCCATCAG 3700
+     ||            ||  ||| |   |   ||  |  | |    |   
+S2 TGTTTTTTAGAGAGCCTCATTCT-T-ACTGATTTC-A-AACACTTTTTTC
+
+
+     *** * ****  * *****  **   *******  ********  ** 
+S1 TTAGCTATCAGACTCTAGGTTGATGCATTTT-GTACTTAGCTGTACTGTG 3750
+   ||   | |    || |     ||  |||       ||        ||  |
+S2 TTCTGTGTATTGCTTTTAAGAGAGCCATCAGGTAGCTATCAGACTCTAGG
+
+
+    *******  ***  *  ******* ************ ***********
+S1 TGATATTTTTCATTATTTTAGGACGCCAACATGAGACCTGT-AATAAAAT 3800
+   |       ||   || ||       |            |           
+S2 TTGATGCATTTTGTACTTAGCTGTACTGTGTGATATTTTTCATTATTTTA
+
+

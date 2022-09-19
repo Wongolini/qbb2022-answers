@@ -45,8 +45,9 @@ class ReadIn():
 class DNA_alignment(ReadIn):
     # HOXD70 scoring matrix
     # gap penalty of 10
-    def __init__(self,infile):
+    def __init__(self,infile,outfile):
         super().__init__(infile) 
+        self.outfile = outfile
         self.gap_penalty = -300
         self.scoring_mat('needleman-wunsch/HOXD70.txt')      
         self.create_f_mat()
@@ -142,7 +143,7 @@ class DNA_alignment(ReadIn):
                 trace.append(slide)
                 
             
-        print('score',self.f_mat[self.f_mat.shape[0]-1,self.f_mat.shape[1]-1])
+        
         seq1_ind = 0
         seq2_ind = 0
         aligned_seq1 = []
@@ -151,21 +152,59 @@ class DNA_alignment(ReadIn):
             if m=='s':
                 aligned_seq2.append('-')
                 aligned_seq1.append(self.query_seq[seq1_ind])
-                seq1_ind += 1
+                if seq1_ind < len(self.query_seq)-1:
+                    seq1_ind += 1
             if m=='q':
                 aligned_seq1.append('-')
                 aligned_seq2.append(self.subject_seq[seq2_ind])
-                seq2_ind += 1
+                if seq2_ind < len(self.subject_seq)-1:
+                    seq2_ind += 1
             else:
                 aligned_seq1.append(self.query_seq[seq1_ind])
                 aligned_seq2.append(self.query_seq[seq2_ind])
-                seq1_ind+=1
-                seq2_ind+=1
-        with open('./aligned.fasta','w') as f:
+                if seq2_ind < len(self.subject_seq)-1:
+                    seq2_ind += 1
+                if seq1_ind < len(self.query_seq)-1:
+                    seq1_ind += 1
+        
+        with open('{}.fasta'.format(self.outfile),'w') as f:
             f.write('>{} ALIGNED\n'.format(self.query_id))
             f.write(''.join(aligned_seq1))
             f.write('\n>{} ALIGNED\n'.format(self.subject_id))
             f.write(''.join(aligned_seq2))
+        chunks = np.arange(0,len(trace),50)
+        print('score',self.f_mat[self.f_mat.shape[0]-1,self.f_mat.shape[1]-1])
+        print('#'*55)
+        print('S1: {}'.format(self.query_id))
+        print('S2: {}'.format(self.subject_id))
+        print('#'*55)
+        print('\n')
+        for i in range(1,len(chunks)):
+
+            if i < len(trace):
+                qc = ''.join(aligned_seq1[chunks[i-1]:chunks[i]])
+                sc = ''.join(aligned_seq2[chunks[i-1]:chunks[i]])
+            else:
+                qc = ''.join(aligned_seq1[chunks[i-1]:])
+                sc = ''.join(aligned_seq2[chunks[i-1]:])
+
+            star = np.array((np.array(list(qc))==np.array(list(sc)))*1,dtype=object)
+            lines = np.array((np.array(list(qc))==np.array(list(sc)))*1,dtype=object)
+            
+            star[np.where(star==1)[0]] = ' ' # match
+            star[np.where(star==0)[0]] = '*' # mismatch
+            star[np.where(trace=='s')[0]] = '' # gap
+            star[np.where(trace=='q')[0]] = '' # gap
+            lines[np.where(lines==1)[0]] = '|'
+            lines[np.where(lines==0)[0]] = ' '
+            lines[np.where(trace=='s')[0]] = ' '
+            lines[np.where(trace=='q')[0]] = ' '
+            print("  ",''.join(star))
+            print('S1',qc,chunks[i])
+            print('  ', ''.join(lines))
+            print('S2' , sc)
+            print('\n')
+
                 
         '''
         (aligning -> gap in sequence 1 -> gap in sequence 2).
@@ -176,8 +215,9 @@ class DNA_alignment(ReadIn):
 class AA_alignment(DNA_alignment):
     # BLOSUM62 scoring matrix
     # gap penalty of 10
-    def __init__(self,infile):
+    def __init__(self,infile,outfile):
         self.infile = infile
+        self.outfile = outfile
         self.read_seq()
         self.gap_penalty = -10
         self.scoring_mat('needleman-wunsch/BLOSUM62.txt')   
@@ -189,9 +229,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-q','--query',required=True,help='Query sequence')
     parser.add_argument('-t','--type',required=True,help='Sequencing Type,(N=Nucleotide P=Protein)') # can accept N or P
+    parser.add_argument('-o','--outfile',required=True,help='outfile name')
     args = parser.parse_args()
     if args.type=='N':
-        D = DNA_alignment(args.query)
+        D = DNA_alignment(args.query,args.outfile)
     elif args.type=='P':
-        P = AA_alignment(args.query)
+        P = AA_alignment(args.query,args.outfile)
      
