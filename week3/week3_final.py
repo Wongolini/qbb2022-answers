@@ -93,13 +93,30 @@ V=Vis(sample_data)
 V.make_hist('DP','Depth') # sample specific FORMAT field
 V.make_hist('QA','Quality ALT') # sample specific FORMAT field
 af = [reader[i][7]['AF'] for i in range(1,len(reader))]
+plt.figure(figsize=[10,10])
+plt.title('Allele Frequency Spectrum')
+plt.xlabel('Allele Frequency')
+plt.ylabel("Frequency")
 plt.hist(af,density=True,bins=55)
+#%%
+effects = {'LOF':0, 'NMD':0}
+for i,r in enumerate(reader):
+    if i == 0:
+        continue
+    k = list(r[7].keys()) 
+    if 'LOF' in k:
+        effects['LOF'] += 1 
+    if 'NMD' in k:
+        effects['NMD'] += 1
+plt.title('Predicted Variants Effects')
+plt.bar(effects.keys(), effects.values(), color ='maroon',
+        width = 0.4)
+'''
+'LOF': "Predicted loss of function effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'",
+'NMD': "Predicted nonsense mediated decay effects for this variant. Format: 'Gene_Name | Gene_ID | Number_of_transcripts_in_gene | Percent_of_transcripts_affected'"
+'''
 #V.make_hist('AO','Allele Frequency Spectrum') # variant specific INFO field
 #%%
-if __name__ =="__main__":
-    vcf_file = sys.argv[1]
-    vcf_reader = parse_vcf(vcf_file)
-    for record in vcf_reader:
-        print(record.CHROM)
+
 
 # %%
