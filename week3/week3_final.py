@@ -109,6 +109,7 @@ for i,r in enumerate(reader):
     if 'NMD' in k:
         effects['NMD'] += 1
 plt.title('Predicted Variants Effects')
+plt.ylabel('Counts')
 plt.bar(effects.keys(), effects.values(), color ='maroon',
         width = 0.4)
 '''
