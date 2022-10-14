@@ -1,0 +1,6 @@
+
+     582 Sox2_R1_R2_intersect.tsv
+     761 Sox2_R1_peaks.narrowPeak
+    1265 Sox2_R2_peaks.narrowPeak
+
+
