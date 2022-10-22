@@ -1,6 +1,6 @@
 # Week 1 Genome Assembly -- Feedback
 
-1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 0.25 + 0 = 8.25 points out of 10 possible points
+1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 0.5 + 1 = 9.5 points out of 10 possible points
 
 1. Question 1.1, 1.4 how many reads (0.5 pts each)
 
@@ -43,10 +43,12 @@
 
 9. decoding the insertion (0.5 pts each, 0.25 for answer and 0.25 for code)
 
-  * position of insertion in assembly --> you have a typo here in your answer that you seem to correct when you run samtools, but even then, the insertion doesn't include 27498: "The insertion begins at 26788 and ends at 27998." --> +0.25
+  * position of insertion in assembly --> ~~you have a typo here in your answer that you seem to correct when you run samtools, but even then, the insertion doesn't include 27498: "The insertion begins at 26788 and ends at 27998." --> +0.25~~ *--> +0.5*
   * length of novel insertion --> didn't see this; +0
 
 10. decoding the insertion cont (0.5 pts each, 0.25 for answer and 0.25 for code)
 
-  * DNA sequence of encoded message
-  * secret message --> I wouldn't expect you to get this secret message given your incorrect coordinates for samtools faidx; please show me that you did indeed get this message and I will give the points back.
+  * DNA sequence of encoded message *--> +0.5*
+  * secret message ~~--> I wouldn't expect you to get this secret message given your incorrect coordinates for samtools faidx; please show me that you did indeed get this message and I will give the points back.~~ *--> +0.5*
+
+*Regrades in italics* replacing strikethroughs
