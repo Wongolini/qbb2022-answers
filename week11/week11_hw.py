@@ -112,7 +112,7 @@ def stacked_violin_plot(cell_dict, adata):
     for key in cell_dict.keys():
         x = [g for g in cell_dict[key] if g in list(adata.var.index)]
         cell_dict[key] = x
-    sc.pl.stacked_violin(adata, cell_dict, groupby='clusters', swap_axes=False, dendrogram=True, save='leiden_res1.0.png')
+    sc.pl.stacked_violin(adata, cell_dict, groupby='leiden; res=1.0', swap_axes=False, dendrogram=True, save='leiden_res1.0.png')
 
 cell_dict = {
     'Cajal-Retzius':['Reln','Trp73','Lhx1','Lhx5'],
@@ -126,4 +126,5 @@ cell_dict = {
 #for key in cell_dict.keys():
     #plot_celltypes_umap(key,cell_dict[key], adata)
 dotplot_celltypes(cell_dict, adata)
+stacked_violin_plot(cell_dict, adata)
 # %%
