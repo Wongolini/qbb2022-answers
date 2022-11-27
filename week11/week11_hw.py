@@ -34,18 +34,14 @@ sc.pp.neighbors(adata)
 
 sc.tl.leiden(adata,key_added='leiden; res=1.0')
 #%%
-fig1,ax1 = plt.subplots(dpi=800)
-plt.title('UMAP')
 # UMAP
 sc.tl.umap(adata,maxiter=1000)
-sc.pl.umap(adata,color=['leiden; res=1.0'],ax=ax1)
-plt.savefig('leiden_umap.png')
+sc.pl.umap(adata,color=['leiden; res=1.0'],save='leiden_res1.0.png',title='UMAP')
+
 # tSNE
-fig2,ax2 = plt.subplots(dpi=800)
-plt.title('tSNE')
 sc.tl.tsne(adata)
-sc.pl.tsne(adata,color=['leiden; res=1.0'],ax=ax2)
-plt.savefig('leiden_tSNE.png')
+sc.pl.tsne(adata,color=['leiden; res=1.0'],save='leiden_res1.0.png',title='tSNE')
+
 
 # %%
 # rank genes
