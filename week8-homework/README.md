@@ -7,7 +7,7 @@ To call variants, you will be using medaka_variant. Unfortunately, like many new
 
 To call variants, Medaka needs to know which model was used to do the basecalling, both for variant calling and phasing. You should use the default for both -s and -m. You will also need the phased vcf file as output (look at -p). Only one region can be specified for Medaka at a time so you will need to generate a phased vcf file for each region in regions.bed using the format chr:start-end to specify the region.
 
-'''
+```
 run_medaka_variant.sh
 whatshap_haplotag.sh
 for x in ./*.bam; do
@@ -22,4 +22,4 @@ whatshap split chr15_medaka_variant_out_whatshap_haplotag.bam chr15_medaka_varia
 
 whatshap split chr20_medaka_variant_out_whatshap_haplotag.bam chr20_medaka_variant_out_whatshap_haplotag.list --output-h1 chr20_h1.bam --output-h2 chr20_h2.bam 
 
-'''
+```
