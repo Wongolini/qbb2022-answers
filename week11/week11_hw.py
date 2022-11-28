@@ -23,7 +23,7 @@ sc.pp.scale(adata)         # scale to unit variance and shift to zero mean
 #%%
 # dim reduction pre-processing PCA
 sc.pp.pca(adata)
-sc.pl.pca(adata)
+sc.pl.pca(adata,save=True)
 # %%
 # Clustering
 sc.pp.neighbors(adata)
@@ -81,7 +81,8 @@ with the cell types you think they mostly represent. Make sure to provide the su
 you made in order to establish your labeling. See this tutorial for an example of how to
 apply labels.
 
-marker genes to use
+marker genes to use:
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6329831/
 
 '''
 # Cell types and marker genes 
