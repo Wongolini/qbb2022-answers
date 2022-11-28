@@ -1,0 +1,1 @@
+whatshap haplotag -o test_chr11 --reference=hg38.fa --regions chr11:1900000:2800000 chr11_medaka_variant_out/round_0_hap_mixed_phased.vcf chr11_medaka_variant_out/round_0_hap_mixed_phased.bam
