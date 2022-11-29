@@ -1,3 +1,4 @@
+```
 samtools view -q 10 D2_Sox2_R2.bam -o D2_Sox2_R2_filtered.bam
 macs2 callpeak -t D2_Sox2_R1_filtered.bam -c D2_Sox2_R1_input.bam -f BAM -n Sox2_R1 -g 8.3e7 -B --outdir macs2_peaks_out/
 macs2 callpeak -t D2_Sox2_R2_filtered.bam -c D2_Sox2_R2_input.bam -f BAM -n Sox2_R2 -g 8.3e7 -B --outdir macs2_peaks_out/
@@ -15,3 +16,4 @@ meme-chip faidx_sorted300_Sox3_combined.fasta -maxw 7
 tomtom combined.meme /Users/cmdb/Downloads/motif_databases/MOUSE/HOCOMOCOv11_full_MOUSE_mono_meme_format.meme 
 grep KLF4|SOX2 tomtom.tsv > MEME_extracted_SOX2_KLF4.tsv
 
+```
