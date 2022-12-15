@@ -1,0 +1,8 @@
+['NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA'
+ 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA'
+ 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA'
+ 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA'
+ 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA'
+ 'Staphylococcus aureus subsp. aureus USA300' 'NA' 'NA' 'NA' 'NA' 'NA'
+ 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA' 'NA']
+{'root': {'root': 1.0}, 'cellular organism': {'cellular organisms': 1.0}, 'Super Kingdom': {'Bacteria': 1.0}, 'Group': {'Terrabacteria group': 1.0}, 'Phylum': {'Firmicutes': 1.0}, 'Class': {'Bacilli': 1.0}, 'Order': {'Bacillales': 1.0}, 'Family': {'Staphylococcaceae': 1.0}, 'Genera': {'Staphylococcus': 1.0}, 'Species': {'Staphylococcus aureus': 0.012658227848101266, 'Staphylococcus epidermidis': 0.9873417721518988}, 'Strain': {'NA': 0.02531645569620253, 'Staphylococcus aureus subsp. aureus': 0.012658227848101266, 'Staphylococcus epidermidis ATCC 12228': 0.3291139240506329, 'Staphylococcus epidermidis RP62A': 0.6329113924050633}, 'subspecies': {'NA': 0.9873417721518988, 'Staphylococcus aureus subsp. aureus USA300': 0.012658227848101266}}
