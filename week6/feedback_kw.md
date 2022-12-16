@@ -1,6 +1,6 @@
 ## Week 6 -- 10 points possible
 
-1 + 1 + 1 + 1 + 0 + 1 + 1 + 0.75 + 0.75 + 1 = 8.5 of 10 points possible
+1 + 1 + 1 + 1 + 1 + 1 + 1 + 0.75 + 0.75 + 1 = 9.5 of 10 points possible
 
 1. Given data question: What percentage of reads are valid interactions?
 
@@ -15,7 +15,7 @@
 
 5. Script set up to shift the data by subtracting minimum value
 
-* I didn't see this. Please correct me if I'm wrong and missed it
+* I didn't see this. Please correct me if I'm wrong and missed it --> **fixed in regrade**
 
 6. Script set up to convert sparse data into square matrix
 
@@ -56,3 +56,6 @@ Possible Bonus points:
   * find the insulation score by taking mean of 5x5 squares of interactions around target
 
 3. Turned in the plot of the heatmap + insulation scores below (0.5 pts each panel)
+
+**regrade 12/15:<br />
+points for subtracting minimum score given back<br/>3D Genome plot you referenced has 6 panels, but repeats ddCTCF - dCTCF full_6400 rather than including ddCTCF_full.6400. It also repeats ddCTCF - dCTCF target_6400 rather than including dCTCF_ontarget_6400. I therefore stand by the grade where you did not turn in the multi-panel plots we asked for and you will not receive full points.**
