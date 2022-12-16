@@ -145,7 +145,7 @@ TD.title = 'ddCTCF - dCTCF full_6400'
 TD.final_matrix = (T3.final_matrix-TD.final_matrix)
 
 obs = [T1,T2,T3,T4,TC,TD]
-fig, axs = plt.subplots(3,3,figsize=[13,13])
+fig, axs = plt.subplots(3,2,figsize=[13,13])
 fig.suptitle('3D Genome ddCTCF-dCTCF 6400 full/on-target',fontsize=15)
 for i,ax in enumerate(numpy.ravel(axs)):
     ob = obs[i]
