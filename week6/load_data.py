@@ -27,6 +27,7 @@ class ThreeSeq:
         self.trimmed_data = self.data[keep_ind_data]
         
         self.trimmed_data['score'] = numpy.log10(.001+self.trimmed_data['score'])
+        self.trimmed_data['score'] = self.trimmed_data['score'] - numpy.max(self.trimmed_data['score'])
         self.square_matrix()
         self.remove_dd_bg()
         self.smooth_matrix()
