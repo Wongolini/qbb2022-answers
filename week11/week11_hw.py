@@ -5,7 +5,9 @@ import matplotlib.pyplot as plt
 adata = sc.read_10x_h5("neuron_10k_v3_filtered_feature_bc_matrix.h5")
 # Make variable names (in this case the genes) unique
 adata.var_names_make_unique()
-
+#%%
+sc.pp.pca(adata)
+sc.pl.pca(adata,save=True)
 # %%
 # step 1 filtering
 sc.pp.filter_genes(adata, min_counts=1)         # only consider genes with more than 1 count
@@ -119,9 +121,35 @@ cell_dict = {
     'RG':['Hes1','Pax6','Ednrb'],
     'Oligodendrocytes':['Olig2']
 }
+cluster2annotation = {
+     '0': 'Cajal-Retzius',
+     '1': 'Excitatory_neuron',
+     '2': 'Interneurons',
+     '3': 'VIP-cells',
+     '4': 'RG',
+     '5': 'Oligodendrocytes'
+}
 
+adata.obs['cell type'] = adata.obs['leiden; res=1.0'].map(cluster2annotation).astype('category')
+#%%
+sc.pl.umap(adata, color='cell type', legend_loc='on data',
+           frameon=False, legend_fontsize=10, legend_fontoutline=2,
+           save='cellTypeUMAP.png')
+#%%
+sc.pl.tsne(adata, color='cell type', legend_loc='on data',
+           frameon=False, legend_fontsize=10, legend_fontoutline=2,
+           save='cellTypeTSNE.png')
+#%%
 #for key in cell_dict.keys():
-    #plot_celltypes_umap(key,cell_dict[key], adata)
+#    plot_celltypes_umap(key,cell_dict[key], adata)
+
+#%%
 dotplot_celltypes(cell_dict, adata)
 stacked_violin_plot(cell_dict, adata)
 # %%
+'''
+Now we just want you to put all that together and reproduce 
+the tSNE (or UMAP) with the clusters labeled based on the 
+cell-types you assigned them. You have almost all the code 
+set up already to do this, you just need to make the plot (-1.5 points)
+'''
