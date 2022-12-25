@@ -1,0 +1,11 @@
+This is the rubric I have for that
+recorded the output for how many bp each features covers in README
+recorded strategies to confirm plots are the same in README and recorded three other gene types in the .gtf they find interesting (0.5 pts each)
+improved plots with log transform (0.5/4 pts each plot) and same axis limits (0.5/4 pts each plot)
+improved plots with titles (0.75/4 pts each plot) and labels (0.25/4 pts each plot)
+added lncRNA.chr21.bed.vcf.png plot and changed code to do this within subset_regions.sh for loop (0.5 pts each)
+described possible trends in plots in README
+documentation within README: example output
+documentation within README: usage
+documentation with README: synopsis and dependencies (0.5 pts each)
+documentation within README: description

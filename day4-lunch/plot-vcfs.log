@@ -1,0 +1,16 @@
+*** Creating .bed files for features of interest
+--- Creating protein_coding.chr21.bed
+--- Creating processed_pseudogene.chr21.bed
+--- Creating exons.chr21.bed
+*** Subsetting .vcf for each feature
+--- Subsetting exons.chr21.bed.vcf
+    + Covering 1107407 bp
+--- Subsetting processed_pseudogene.chr21.bed.vcf
+    + Covering 956640 bp
+--- Subsetting protein_coding.chr21.bed.vcf
+    + Covering 13780687 bp
+*** Plotting AC for each .vcf
+--- Plotting AC for exons.chr21.bed.vcf
+--- Plotting AC for processed_pseudogene.chr21.bed.vcf
+--- Plotting AC for protein_coding.chr21.bed.vcf
+--- Plotting AC for random_snippet.vcf
