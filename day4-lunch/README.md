@@ -61,6 +61,6 @@ bash do_all.sh <random_snippet.vcf> <gencode.v41.annotation.gtf>
 # Example output
 For chrom 21 and gene_type lncRNA, the following image file will be produced from do_all.sh
 lncRNA.exons.chr21.bed.vcf.png
-
+![](https://github.com/Wongolini/qbb2022-answers/blob/main/day4-lunch/lncRNA.exons.chr21.bed.vcf.png)
 
 
