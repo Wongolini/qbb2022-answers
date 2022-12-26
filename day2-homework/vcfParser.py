@@ -20,10 +20,10 @@ def parse_vcf(fname):
         raise FileNotFoundError(f"{fname} does not appear to exist", file=sys.stderr)
 
     for h, line in enumerate(fs):
-        if line.startswith("#"):
+        if line.startswith("#"): # parse for metadata
             try:
-                if line.startswith("##FORMAT"):
-                    fields = line.split("=<")[1].rstrip(">\r\n") + "," #regex the field line if the line starts with ##FORMAT
+                if line.startswith("##FORMAT"): # Get format of vcf file
+                    fields = line.split("=<")[1].rstrip(">\r\n") + ","
                     i = 0
                     start = 0
                     in_string = False
@@ -39,9 +39,9 @@ def parse_vcf(fname):
                         elif fields[i] == '"':
                             in_string = not in_string
                         i += 1
-                    format_description[ID] = desc.strip('"')
-                elif line.startswith("##INFO"):                         #parsing the info lines of vcf
-                    fields = line.split("=<")[1].rstrip(">\r\n") + "," # split into list by =< and strip the new lines
+                    format_description[ID] = desc.strip('"') # add ID - description to format_descirption dict
+                elif line.startswith("##INFO"): # metadata of vcf and add to info_description
+                    fields = line.split("=<")[1].rstrip(">\r\n") + ","
                     i = 0
                     start = 0
                     in_string = False
@@ -49,30 +49,34 @@ def parse_vcf(fname):
                         if fields[i] == "," and not in_string:
                             if fields[start:i].count("=") == 1:
                                 name, value = fields[start:i].split('=')
-                                if name == "ID":        # get id
+                                if name == "ID":
                                     ID = value
                                 elif name == "Description":
-                                    desc = value        # get description
+                                    desc = value
                                 elif name == "Type":
-                                    Type = value        # get type
+                                    Type = value
                             start = i + 1
                         elif fields[i] == '"':
                             in_string = not in_string
                         i += 1
                     info_description[ID] = desc.strip('"')
                     info_type[ID] = Type
-                elif line.startswith('#CHROM'):                        #parsing the lines with chrom info
+                elif line.startswith('#CHROM'): # tabular portion of data
+                    # Get all headers of vcf
                     fields = line.lstrip("#").rstrip().split("\t")
                     vcf.append(fields)
             except:
                 raise RuntimeError("Malformed header")
         else:
             try:
+                # add all tabular data corresponding to fields to vcf list
                 fields = line.rstrip().split("\t")
+                # handle POS (int)
                 fields[1] = int(fields[1])
                 if fields[5] != ".":
                     fields[5] = float(fields[5])
                 info = {}
+                # parse INFO field eg. NS=3;DP=14;AF=0.5;DB;H2
                 for entry in fields[7].split(";"):
                     temp = entry.split("=")
                     if len(temp) == 1:
@@ -89,6 +93,7 @@ def parse_vcf(fname):
                             fields[i] = fields[i].split(':')
                     else:
                         fields[8] = fields[8][0]
+                # add parsed line of data to vcf
                 vcf.append(fields)
             except:
                 malformed += 1
